@@ -1,231 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="https://github.com/meyerls/For5G/raw/master/resources/img.png">
-    <meta property="og:image" content="https://github.com/meyerls/For5G/raw/master/resources/img.png"/>
-    <meta property="og:title"
-          content="MS Splatting"/>
-    <meta property="og:description"
-          content="Towards Integrating Multi-Spectral Imaging with Gaussian Splatting"/>
     <meta charset="utf-8">
-    <meta name="keywords"
-          content="3DGS, Gaussian Splatting, Multi-Spectral Reconstruction, Machine Learning, Deep Learning, AI, Vegetation Index, NDVI, Normalized Difference Vegetation Index ">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Towards Integrating Multi-Spectral Imaging with Gaussian Splatting</title>
-    <script src="static/js/video_comparison.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- SEO + Meta -->
+    <meta name="description" content="Towards Integrating Multi-Spectral Imaging with Gaussian Splatting">
+    <meta property="og:title" content="MS Splatting">
+    <meta property="og:description" content="Towards Integrating Multi-Spectral Imaging with Gaussian Splatting">
+    <meta property="og:image" content="https://github.com/meyerls/For5G/raw/master/resources/img.png">
+    <link rel="icon" type="image/x-icon" href="https://github.com/meyerls/For5G/raw/master/resources/img.png">
 
-    <link rel="stylesheet" href="static/css/dics.min.css">
-    <script src="static/js/dics.min.js"></script>
-
-    <link rel="stylesheet" href="./static/css/bulma.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <!-- Bulma + Icons -->
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="./static/css/index.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--script defer src="./static/js/fontawesome.all.min.js"></script-->
-    <script src="./static/js/bulma-carousel.min.js"></script>
-
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
-
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-PYVRSFMDRL');
-
-        document.addEventListener('DOMContentLoaded', domReady);
-
-        function domReady() {
-            for (const e of document.querySelectorAll(".b-dics")) {
-                new Dics({
-                    container: e,
-                    textPosition: "top"
-                });
-            }
-        }
-
-    </script>
-
+    <link rel="stylesheet" href="static/css/index.css">
 </head>
+
 <body>
 
-
+<!-- HERO HEADER -->
 <section class="hero">
-    <div class="hero-head">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
-                                        <br>
+    <div class="hero-body">
+        <div class="container has-text-centered">
 
-<div class="logos has-text-centered" style="display: flex; align-items: center; justify-content: center; gap: 100px;">
-  <!-- VMV logo -->
-  <img src="static/images/vmv_logo.svg" alt="VMV Logo" style="height: 80px;">
-
-  <!-- Drone image -->
-  <img src="static/images/ms_drone.png" alt="Drone" style="height: 130px;">
-
-  <!-- FAU logo -->
-  <img src="static/images/vce_logo.png" alt="VCE Logo" style="height: 140px;">
-</div>
-
-                    <br>
-<h1 class="title is-1 publication-title">
-  Towards Integrating Multi-Spectral Imaging with Gaussian Splatting
-</h1>
-                    <div class="is-size-5 publication-authors">
-<span class="author-block">
-  <a href="https://j-gruen.github.io">Josef Grün,</a>
- </span>
-
-<span class="author-block">
-  <a href="https://meyerls.github.io">Lukas Meyer</a>
-  <a href="https://orcid.org/0000-0003-3849-7094" target="_blank">
-    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-         alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
-  </a>,</span>
-
-<span class="author-block">
-  <a href="https://mweiherer.github.io/">Maximilian Weiherer</a>
-  <a href="https://orcid.org/" target="_blank">
-    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-         alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
-  </a>,</span>
-
-<span class="author-block">
-  <a href="https://eggerbernhard.ch/">Bernhard Egger</a>
-  <a href="https://orcid.org/0000-0002-4736-2397" target="_blank">
-    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-         alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
-  </a>,</span>
-
-<span class="author-block">
-  <a href="https://scholar.google.com/citations?hl=de&user=cx4AaqoAAAAJ">Marc Stamminger</a>
-  <a href="https://orcid.org/0000-0001-8699-3442" target="_blank">
-    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-         alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
-  </a>,</span>
-
-<span class="author-block">
-  <a href="https://lfranke.github.io/">Linus Franke</a>
-  <a href="https://orcid.org/0000-0001-8180-0963" target="_blank">
-    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-         alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
-  </a></span>
-
-
-
-                    </div>
-                    <br>
-
-                    <div class="is-size-5 publication-authors">
-                      <span class="author-block">
-                        <b>Visual Computing Erlangen</b>,
-                        Friedrich-Alexander-Universität Erlangen - Nürnberg
-                        <span class="fuerth" style="display: none;">- Fürth</span>, Germany
-                      </span>
-                    </div>
-
-
-                    <script>
-                      document.addEventListener('DOMContentLoaded', () => {
-                        const fuerthEl = document.querySelector('.author-block .fuerth');
-
-                        function toggleFuerth() {
-                          // flip visibility
-                          fuerthEl.style.display = (fuerthEl.style.display === 'none') ? 'inline' : 'none';
-                          // schedule next flip
-                          const delay = Math.random() * (30 - 10) + 10;
-                          setTimeout(toggleFuerth, delay * 1000);
-                        }
-
-                        // initial schedule (so it's hidden at first)
-                        const initialDelay = Math.random() *  (30 - 10) + 10;
-                        setTimeout(toggleFuerth, initialDelay * 1000);
-                      });
-                    </script>
-
-                    <div class="column has-text-centered">
-                        <div class="publication-links">
-                            <!-- PDF Link. -->
-                            <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-                            <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-                            <!-- Video Link. -->
-                            <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>                  <span>Video (tbd)</span>
-                </a>
-              </span>
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                <a href="https://github.com/j-gruen/MS-Splatting"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-                            <!-- Dataset Link. -->
-                            <span class="link-block">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                           class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a></span>
-                        </div>
-                    </div>
+            <!-- Logos -->
+            <div class="columns is-vcentered is-mobile is-centered mb-5">
+                <div class="column is-narrow">
+                    <img src="static/images/vmv_logo.svg" alt="VMV Logo" style="height:80px;">
+                </div>
+                <div class="column is-narrow">
+                    <img src="static/images/ms_drone.png" alt="Drone" style="height:130px;">
+                </div>
+                <div class="column is-narrow">
+                    <img src="static/images/vce_logo.png" alt="VCE Logo" style="height:100px;">
                 </div>
             </div>
-            <div class="hero-body  has-text-centered">
-                <!-- Abstract. -->
-                <img src="static/images/Pipeline.png" width="70%">
 
+            <!-- Title -->
+            <h1 class="title is-1 mb-4">
+                Towards Integrating Multi-Spectral Imaging with Gaussian Splatting
+            </h1>
+
+            <!-- Authors -->
+<!-- Authors -->
+<div class="is-size-5 publication-authors">
+
+  <span class="author-block">
+    <a href="https://j-gruen.github.io">Josef Grün</a>,
+  </span>
+
+  <span class="author-block">
+    <a href="https://meyerls.github.io">Lukas Meyer</a>
+    <a href="https://orcid.org/0000-0003-3849-7094" target="_blank">
+      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+           alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
+    </a>,
+  </span>
+
+  <span class="author-block">
+    <a href="https://mweiherer.github.io/">Maximilian Weiherer</a>
+    <a href="https://orcid.org/" target="_blank">
+      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+           alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
+    </a>,
+  </span>
+
+  <span class="author-block">
+    <a href="https://eggerbernhard.ch/">Bernhard Egger</a>
+    <a href="https://orcid.org/0000-0002-4736-2397" target="_blank">
+      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+           alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
+    </a>,
+  </span>
+
+  <span class="author-block">
+    <a href="https://scholar.google.com/citations?hl=de&user=cx4AaqoAAAAJ">Marc Stamminger</a>
+    <a href="https://orcid.org/0000-0001-8699-3442" target="_blank">
+      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+           alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
+    </a>,
+  </span>
+
+  <span class="author-block">
+    <a href="https://lfranke.github.io/">Linus Franke</a>
+    <a href="https://orcid.org/0000-0001-8180-0963" target="_blank">
+      <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+           alt="ORCID iD" style="width:16px; height:16px; margin-left:4px;"/>
+    </a>
+  </span>
+
+  <p class="is-size-5 mt-2">
+    <b>Visual Computing Erlangen</b>, Friedrich-Alexander-Universität Erlangen - Nürnberg
+    <span class="fuerth" style="display: none;">- Fürth</span>, Germany
+  </p>
+</div>
+
+
+                <!-- Fürth toggle -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                      const fuerthEl = document.querySelector('.fuerth');
+
+                      function toggleFuerth() {
+                        fuerthEl.style.display = (fuerthEl.style.display === 'none') ? 'inline' : 'none';
+                        const delay = Math.random() * (30 - 10) + 10;
+                        setTimeout(toggleFuerth, delay * 1000);
+                      }
+
+                      const initialDelay = Math.random() * (30 - 10) + 10;
+                      setTimeout(toggleFuerth, initialDelay * 1000);
+                    });
+                </script>
+
+                <!-- Links -->
+                <div class="buttons is-centered mt-5">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
+                        <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
+                        <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-danger is-rounded">
+                        <span class="icon"><i class="fab fa-youtube"></i></span><span>Video (tbd)</span>
+                    </a>
+                    <a href="https://github.com/j-gruen/MS-Splatting" class="button is-dark is-rounded">
+                        <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
+                        <span class="icon"><i class="far fa-images"></i></span><span>Data</span>
+                    </a>
+                </div>
             </div>
         </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section has-background-light">
+    <div class="container has-text-centered">
+        <iframe width="70%" height="500"
+                src="https://www.youtube.com/embed/okqMAbUzBaE?autoplay=1&mute=1&loop=1&controls=0&playlist=okqMAbUzBaE&vq=hd1080"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+        </iframe>
     </div>
 </section>
 
+<!-- ABSTRACT -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
 
-<section class="section is-small">
-    <div class="hero-body  has-text-centered">
-        <!-- Abstract. -->
-        <h2 class="title is-3">Abstract</h2>
-        <div class="container has-text-justified is-max-desktop">
-            <p>
+        <p>
             We present a study of how to integrate color (RGB) and multi-spectral imagery
             (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting (3DGS) framework —
             a leading explicit radiance-field method for fast and high-fidelity 3D reconstruction from multi-view images
@@ -233,91 +164,75 @@
             While 3DGS excels on RGB data, naive per-band optimization of additional spectra yields poor reconstructions
             due to inconsistently appearing geometry in the spectral domain.
             This problem is prominent, even though the actual geometry is the same, regardless of spectral modality.
-            </p>
+        </p>
 
-            <p>
+        <p>
             To investigate this, we evaluate three strategies:
-            <ol>
-              <li><strong>Separate</strong>: per-band reconstruction with no shared structure;</li>
-              <li><strong>Split optimization</strong>: first optimize RGB geometry, copy it, and then fit each new band to the model by optimizing both geometry and band representation;</li>
-              <li><strong>Joint</strong>: jointly optimize all modalities, optionally with an initial RGB-only phase.</li>
-            </ol>
-            </p>
+        </p>
+        <ol>
+            <li><b>Separate</b>: per-band reconstruction with no shared structure;</li>
+            <li><b>Split optimization</b>: first optimize RGB geometry, copy it, and then fit each new band to the model
+                by optimizing both geometry and band representation;
+            </li>
+            <li><b>Joint</b>: jointly optimize all modalities, optionally with an initial RGB-only phase.</li>
+        </ol>
 
-            <p>
+        <p>
             We showcase through quantitative metrics and qualitative novel-view renderings on multi-spectral datasets
             the effectiveness of our optimized <em>Joint</em> strategy, which improves overall spectral reconstruction
             and enhances RGB results through spectral cross-talk.
-            </p>
+        </p>
 
-            <p>
+        <p>
             We therefore propose the integration of multi-spectral data into the spherical harmonics color components
             to compactly model each Gaussian’s multi-spectral reflectance.
             Our analysis reveals key trade-offs in when and how to introduce spectral bands during optimization,
             offering practical hints for robust multi-modal 3DGS reconstruction.
-            </p>
+        </p>
+
+        <div class="has-text-centered mt-5">
+            <img src="static/images/Pipeline.png" style="max-width:90%;">
         </div>
     </div>
 </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div class="col-md-8 col-md-offset-1">
-        <div class="video-container">
-          <iframe width="70%" height="500"
-            src="https://www.youtube.com/embed/okqMAbUzBaE?autoplay=1&mute=1&loop=1&controls=0&playlist=okqMAbUzBaE&vq=hd1080"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
+<!-- ACKNOWLEDGEMENTS -->
+<section class="section has-background-light">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
+
+        <p>
+            Lukas Meyer was funded by the 5G innovation program of the German Federal Ministry for Digital and Transport
+            under the funding code <b>165GU103C</b>.
+            Maximilian Weiherer was funded by the German Federal Ministry of Education and Research (BMBF),
+            FKZ: <b>01IS22082 (IRRW)</b>.
+        </p>
+
+        <p>
+            The authors are responsible for the content of this publication and thank the reviewers for their insightful
+            comments.
+        </p>
+
+        <p>
+            The authors gratefully acknowledge the scientific support and HPC resources provided by the Erlangen
+            National High Performance Computing Center (NHR@FAU) of the Friedrich-Alexander-Universität
+            Erlangen-Nürnberg (FAU) under the NHR project <em>b162dc</em>.
+            NHR funding is provided by federal and Bavarian state authorities.
+            NHR@FAU hardware is partially funded by the German Research Foundation (DFG) – <b>440719683</b>.
+        </p>
+
+        <p>
+            We thank <b>Martin Hundhausen</b> for supporting the scene recordings.
+        </p>
     </div>
-  </div>
 </section>
 
-
-
-
-<section class="hero">
-  <div class="hero-body is-light is-centered has-text-centered">
-    <h2 class="title is-3">Acknowledgements</h2>
-    <div class="container has-text-justified is-max-desktop">
-
-      <p>
-        Lukas Meyer was funded by the 5G innovation program of the German Federal Ministry for Digital and Transport
-        under the funding code <strong>165GU103C</strong>.
-        Maximilian Weiherer was funded by the German Federal Ministry of Education and Research (BMBF),
-        FKZ: <strong>01IS22082 (IRRW)</strong>.
-      </p>
-
-      <p>
-        The authors are responsible for the content of this publication and thank the reviewers for their insightful comments.
-      </p>
-
-      <p>
-        The authors gratefully acknowledge the scientific support and HPC resources provided by the Erlangen
-        National High Performance Computing Center (NHR@FAU) of the Friedrich-Alexander-Universität
-        Erlangen-Nürnberg (FAU) under the NHR project <em>b162dc</em>.
-        NHR funding is provided by federal and Bavarian state authorities.
-        NHR@FAU hardware is partially funded by the German Research Foundation (DFG) – <strong>440719683</strong>.
-      </p>
-
-      <p>
-        We thank <strong>Martin Hundhausen</strong> for supporting the scene recordings.
-      </p>
-
-    </div>
-  </div>
-</section>
-
-
+<!-- BIBTEX -->
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@InProceedings{MSSplatting2025,
-  author    = {Josef Gr\"un and Lukas Meyer and Maximilian Weiherer and Bernhard Egger and Marc Stamminger},
+    <div class="container is-max-desktop content">
+        <h2 class="title has-text-centered">BibTeX</h2>
+        <pre><code>@InProceedings{MSSplatting2025,
+  author    = {Josef Grün and Lukas Meyer and Maximilian Weiherer and Bernhard Egger and Marc Stamminger},
   title     = {Towards Integrating Multi-Spectral Imaging with Gaussian Splatting},
   booktitle = {Proceedings of the Vision, Modeling, and Visualization Conference (VMV)},
   year      = {2025},
@@ -325,39 +240,22 @@
   publisher = {Eurographics Association},
   url       = {https://meyerls.github.io/towards_multi_spec_splat}
 }</code></pre>
-  </div>
+    </div>
 </section>
 
-
+<!-- FOOTER -->
 <footer class="footer">
-    <div class="container">
-        <div class="content has-text-centered">
-            <a class="icon-link"
-               href="http://scholar.google.comf">
-                <i class="fas fa-file-pdf"></i>
-            </a>
-            <a class="icon-link" href="https://github.com/meyerls" class="external-link" disabled>
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-
-
-        <div class="columns is-centered">
-            <div class="column is-8">
-                <div class="content">
-                    <p>
-                        This website is licensed under a <a rel="license"
-                                                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                        Commons Attribution-ShareAlike 4.0 International License</a>.
-                    </p>
-                    <p>
-                        The source code of this website is borrowed from <a
-                            href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
-                        We thank the authors for sharing the template.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="content has-text-centered">
+        <p>
+            This website is licensed under a
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 International License</a>.
+        </p>
+        <p>
+            Template adapted from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </p>
+        <p>
+            <a href="https://github.com/meyerls"><i class="fab fa-github fa-2x"></i></a>
+        </p>
     </div>
 </footer>
 
