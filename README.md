@@ -1,1 +1,1 @@
-# towards_multi_spec_splat
+# ms_splatting
