@@ -147,55 +147,55 @@
         </iframe>
     </div>
 </section>
-
 <!-- ABSTRACT -->
 <section class="section">
-    <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Abstract</h2>
+  <div class="container is-max-desktop has-text-justified">
+    <h2 class="title is-3 has-text-centered">Abstract</h2>
 
-        <p>
-            We present a study of how to integrate color (RGB) and multi-spectral imagery
-            (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting (3DGS) framework —
-            a leading explicit radiance-field method for fast and high-fidelity 3D reconstruction from multi-view images
-            (<a href="https://arxiv.org/abs/2308.04079">Kerbl et al.</a>).
-            While 3DGS excels on RGB data, naive per-band optimization of additional spectra yields poor reconstructions
-            due to inconsistently appearing geometry in the spectral domain.
-            This problem is prominent, even though the actual geometry is the same, regardless of spectral modality.
-        </p>
+    <p>
+      We present a study of how to integrate color (RGB) and multi-spectral imagery
+      (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting (3DGS) framework —
+      a leading explicit radiance-field method for fast and high-fidelity 3D reconstruction from multi-view images
+      (<a href="https://arxiv.org/abs/2308.04079">Kerbl et al.</a>).
+      While 3DGS excels on RGB data, naive per-band optimization of additional spectra yields poor reconstructions
+      due to inconsistently appearing geometry in the spectral domain.
+      This problem is prominent, even though the actual geometry is the same, regardless of spectral modality.
+    </p>
 
-        <p>
-            To investigate this, we evaluate three strategies:
-        </p>
-        <ol>
-            <li><b>Separate</b>: per-band reconstruction with no shared structure;</li>
-            <li><b>Split optimization</b>: first optimize RGB geometry, copy it, and then fit each new band to the model
-                by optimizing both geometry and band representation;
-            </li>
-            <li><b>Joint</b>: jointly optimize all modalities, optionally with an initial RGB-only phase.</li>
-        </ol>
+    <p>
+      To investigate this, we evaluate three strategies:
+    </p>
+    <ol>
+      <li><b>Separate</b>: per-band reconstruction with no shared structure;</li>
+      <li><b>Split optimization</b>: first optimize RGB geometry, copy it, and then fit each new band to the model
+        by optimizing both geometry and band representation;
+      </li>
+      <li><b>Joint</b>: jointly optimize all modalities, optionally with an initial RGB-only phase.</li>
+    </ol>
 
-        <p>
-            We showcase through quantitative metrics and qualitative novel-view renderings on multi-spectral datasets
-            the effectiveness of our optimized <em>Joint</em> strategy, which improves overall spectral reconstruction
-            and enhances RGB results through spectral cross-talk.
-        </p>
+    <p>
+      We showcase through quantitative metrics and qualitative novel-view renderings on multi-spectral datasets
+      the effectiveness of our optimized <em>Joint</em> strategy, which improves overall spectral reconstruction
+      and enhances RGB results through spectral cross-talk.
+    </p>
 
-        <p>
-            We therefore propose the integration of multi-spectral data into the spherical harmonics color components
-            to compactly model each Gaussian’s multi-spectral reflectance.
-            Our analysis reveals key trade-offs in when and how to introduce spectral bands during optimization,
-            offering practical hints for robust multi-modal 3DGS reconstruction.
-        </p>
+    <p>
+      We therefore propose the integration of multi-spectral data into the spherical harmonics color components
+      to compactly model each Gaussian’s multi-spectral reflectance.
+      Our analysis reveals key trade-offs in when and how to introduce spectral bands during optimization,
+      offering practical hints for robust multi-modal 3DGS reconstruction.
+    </p>
 
-        <div class="has-text-centered mt-5">
-            <img src="static/images/Pipeline.png" style="max-width:90%;">
-        </div>
+    <div class="has-text-centered mt-5">
+      <img src="static/images/Pipeline.png" style="max-width:90%;">
     </div>
+  </div>
 </section>
+
 
 <!-- ACKNOWLEDGEMENTS -->
 <section class="section has-background-light">
-    <div class="container is-max-desktop">
+  <div class="container is-max-desktop has-text-justified">
         <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
 
         <p>
