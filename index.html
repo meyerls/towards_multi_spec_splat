@@ -28,18 +28,14 @@
     <div class="hero-body">
         <div class="container has-text-centered">
 
-            <!-- Logos -->
-            <div class="columns is-vcentered is-mobile is-centered mb-5">
-                <div class="column is-narrow">
-                    <img src="static/images/vmv_logo.svg" alt="VMV Logo" style="height:80px;">
-                </div>
-                <div class="column is-narrow">
-                    <img src="static/images/ms_drone.png" alt="Drone" style="height:130px;">
-                </div>
-                <div class="column is-narrow">
-                    <img src="static/images/vce_logo.png" alt="VCE Logo" style="height:100px;">
-                </div>
-            </div>
+        <!-- Logos -->
+        <div class="logo-row mb-5">
+          <img class="vmv"   src="static/images/vmv_logo.png" alt="VMV Logo">
+          <img class="drone" src="static/images/ms_drone.png" alt="Drone">
+          <img class="vce"   src="static/images/vce_logo.png" alt="VCE Logo">
+        </div>
+
+
 
             <!-- Title -->
             <h1 class="title is-1 mb-4">
@@ -47,14 +43,14 @@
             </h1>
 
             <!-- Authors -->
-<!-- Authors -->
-<div class="is-size-5 publication-authors">
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors">
 
   <span class="author-block">
     <a href="https://j-gruen.github.io">Josef Grün</a>,
   </span>
 
-  <span class="author-block">
+                <span class="author-block">
     <a href="https://meyerls.github.io">Lukas Meyer</a>
     <a href="https://orcid.org/0000-0003-3849-7094" target="_blank">
       <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
@@ -62,7 +58,7 @@
     </a>,
   </span>
 
-  <span class="author-block">
+                <span class="author-block">
     <a href="https://mweiherer.github.io/">Maximilian Weiherer</a>
     <a href="https://orcid.org/" target="_blank">
       <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
@@ -70,7 +66,7 @@
     </a>,
   </span>
 
-  <span class="author-block">
+                <span class="author-block">
     <a href="https://eggerbernhard.ch/">Bernhard Egger</a>
     <a href="https://orcid.org/0000-0002-4736-2397" target="_blank">
       <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
@@ -78,7 +74,7 @@
     </a>,
   </span>
 
-  <span class="author-block">
+                <span class="author-block">
     <a href="https://scholar.google.com/citations?hl=de&user=cx4AaqoAAAAJ">Marc Stamminger</a>
     <a href="https://orcid.org/0000-0001-8699-3442" target="_blank">
       <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
@@ -86,7 +82,7 @@
     </a>,
   </span>
 
-  <span class="author-block">
+                <span class="author-block">
     <a href="https://lfranke.github.io/">Linus Franke</a>
     <a href="https://orcid.org/0000-0001-8180-0963" target="_blank">
       <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
@@ -94,108 +90,113 @@
     </a>
   </span>
 
-  <p class="is-size-5 mt-2">
-    <b>Visual Computing Erlangen</b>, Friedrich-Alexander-Universität Erlangen - Nürnberg
-    <span class="fuerth" style="display: none;">- Fürth</span>, Germany
-  </p>
-</div>
+                <p class="is-size-5 mt-2">
+                    <b>Visual Computing Erlangen</b>, Friedrich-Alexander-Universität Erlangen - Nürnberg
+                    <span class="fuerth" style="display: none;">- Fürth</span>, Germany
+                </p>
+            </div>
 
 
-                <!-- Fürth toggle -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                      const fuerthEl = document.querySelector('.fuerth');
+            <!-- Fürth toggle -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const fuerthEl = document.querySelector('.fuerth');
 
-                      function toggleFuerth() {
+                    function toggleFuerth() {
                         fuerthEl.style.display = (fuerthEl.style.display === 'none') ? 'inline' : 'none';
                         const delay = Math.random() * (30 - 10) + 10;
                         setTimeout(toggleFuerth, delay * 1000);
-                      }
+                    }
 
-                      const initialDelay = Math.random() * (30 - 10) + 10;
-                      setTimeout(toggleFuerth, initialDelay * 1000);
-                    });
-                </script>
+                    const initialDelay = Math.random() * (30 - 10) + 10;
+                    setTimeout(toggleFuerth, initialDelay * 1000);
+                });
+            </script>
 
-                <!-- Links -->
-                <div class="buttons is-centered mt-5">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
-                        <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (tbd)</span>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
-                        <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv (tbd)</span>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=okqMAbUzBaE" class="button is-danger is-rounded">
-                        <span class="icon"><i class="fab fa-youtube"></i></span><span>Video</span>
-                    </a>
-                    <a href="https://github.com/j-gruen/MS-Splatting" class="button is-dark is-rounded">
-                        <span class="icon"><i class="fab fa-github"></i></span><span>Code (tbd)</span>
-                    </a>
-                </div>
+            <!-- Links -->
+            <div class="buttons is-centered mt-5">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (tbd)</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button is-dark is-rounded">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv (tbd)</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=okqMAbUzBaE" class="button is-danger is-rounded">
+                    <span class="icon"><i class="fab fa-youtube"></i></span><span>Video</span>
+                </a>
+                <a href="https://github.com/j-gruen/MS-Splatting" class="button is-dark is-rounded">
+                    <span class="icon"><i class="fab fa-github"></i></span><span>Code (tbd)</span>
+                </a>
             </div>
         </div>
+    </div>
 </section>
+
 
 <!-- VIDEO -->
 <section class="section has-background-light">
-    <div class="container has-text-centered">
-        <iframe width="70%" height="500"
-                src="https://www.youtube.com/embed/okqMAbUzBaE?autoplay=1&mute=1&loop=1&controls=0&playlist=okqMAbUzBaE&vq=hd1080"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen>
-        </iframe>
-    </div>
-</section>
-<!-- ABSTRACT -->
-<section class="section">
-  <div class="container is-max-desktop has-text-justified">
-    <h2 class="title is-3 has-text-centered">Abstract</h2>
-
-    <p>
-      We present a study of how to integrate color (RGB) and multi-spectral imagery
-      (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting (3DGS) framework —
-      a leading explicit radiance-field method for fast and high-fidelity 3D reconstruction from multi-view images
-      (<a href="https://arxiv.org/abs/2308.04079">Kerbl et al.</a>).
-      While 3DGS excels on RGB data, naive per-band optimization of additional spectra yields poor reconstructions
-      due to inconsistently appearing geometry in the spectral domain.
-      This problem is prominent, even though the actual geometry is the same, regardless of spectral modality.
-    </p>
-
-    <p>
-      To investigate this, we evaluate three strategies:
-    </p>
-    <ol>
-      <li><b>Separate</b>: per-band reconstruction with no shared structure;</li>
-      <li><b>Split optimization</b>: first optimize RGB geometry, copy it, and then fit each new band to the model
-        by optimizing both geometry and band representation;
-      </li>
-      <li><b>Joint</b>: jointly optimize all modalities, optionally with an initial RGB-only phase.</li>
-    </ol>
-
-    <p>
-      We showcase through quantitative metrics and qualitative novel-view renderings on multi-spectral datasets
-      the effectiveness of our optimized <em>Joint</em> strategy, which improves overall spectral reconstruction
-      and enhances RGB results through spectral cross-talk.
-    </p>
-
-    <p>
-      We therefore propose the integration of multi-spectral data into the spherical harmonics color components
-      to compactly model each Gaussian’s multi-spectral reflectance.
-      Our analysis reveals key trade-offs in when and how to introduce spectral bands during optimization,
-      offering practical hints for robust multi-modal 3DGS reconstruction.
-    </p>
-
-    <div class="has-text-centered mt-5">
-      <img src="static/images/Pipeline.png" style="max-width:90%;">
+  <div class="container has-text-centered">
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/okqMAbUzBaE?autoplay=1&mute=1&loop=1&controls=0&playlist=okqMAbUzBaE&vq=hd1080"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
 </section>
 
 
+<!-- ABSTRACT -->
+<section class="section">
+    <div class="container is-max-desktop has-text-justified">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+
+        <p>
+            We present a study of how to integrate color (RGB) and multi-spectral imagery
+            (red, green, red-edge, and near-infrared) into the 3D Gaussian Splatting (3DGS) framework —
+            a leading explicit radiance-field method for fast and high-fidelity 3D reconstruction from multi-view images
+            (<a href="https://arxiv.org/abs/2308.04079">Kerbl et al.</a>).
+            While 3DGS excels on RGB data, naive per-band optimization of additional spectra yields poor reconstructions
+            due to inconsistently appearing geometry in the spectral domain.
+            This problem is prominent, even though the actual geometry is the same, regardless of spectral modality.
+        </p>
+
+        <p>
+            To investigate this, we evaluate three strategies:
+        </p>
+        <ol>
+            <li><b>Separate</b>: per-band reconstruction with no shared structure;</li>
+            <li><b>Split optimization</b>: first optimize RGB geometry, copy it, and then fit each new band to the model
+                by optimizing both geometry and band representation;
+            </li>
+            <li><b>Joint</b>: jointly optimize all modalities, optionally with an initial RGB-only phase.</li>
+        </ol>
+
+        <p>
+            We showcase through quantitative metrics and qualitative novel-view renderings on multi-spectral datasets
+            the effectiveness of our optimized <em>Joint</em> strategy, which improves overall spectral reconstruction
+            and enhances RGB results through spectral cross-talk.
+        </p>
+
+        <p>
+            We therefore propose the integration of multi-spectral data into the spherical harmonics color components
+            to compactly model each Gaussian’s multi-spectral reflectance.
+            Our analysis reveals key trade-offs in when and how to introduce spectral bands during optimization,
+            offering practical hints for robust multi-modal 3DGS reconstruction.
+        </p>
+
+        <div class="has-text-centered mt-5">
+            <img src="static/images/Pipeline.png" style="max-width:90%;">
+        </div>
+    </div>
+</section>
+
+
 <!-- ACKNOWLEDGEMENTS -->
 <section class="section has-background-light">
-  <div class="container is-max-desktop has-text-justified">
+    <div class="container is-max-desktop has-text-justified">
         <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
 
         <p>

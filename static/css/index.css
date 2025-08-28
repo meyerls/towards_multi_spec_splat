@@ -125,3 +125,62 @@ body {
 .results-carousel video {
   margin: 0;
 }
+
+
+  .logo-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: clamp(12px, 4vw, 48px);
+    flex-wrap: nowrap;            /* no stacking */
+  }
+  .logo-row img{
+    display:block;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+  /* Per-image responsive heights */
+  .logo-row img.vmv   { height: clamp(40px, 6vw, 80px); }
+  .logo-row img.drone { height: clamp(60px, 9vw, 130px); }
+  .logo-row img.vce   { height: clamp(70px, 7vw, 140px); }
+
+
+  /* Shrink fonts on small screens */
+@media screen and (max-width: 768px) {
+  h1.title {
+    font-size: 1.75rem;   /* smaller for phones */
+  }
+
+  h2.title {
+    font-size: 1.25rem;
+  }
+
+  body {
+    font-size: 0.9rem;    /* shrink general text */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1, .title.is-1 { font-size: 1.75rem !important; }
+  h2, .title.is-2 { font-size: 1.5rem !important; }
+  h3, .title.is-3 { font-size: 1.25rem !important; }
+}
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
