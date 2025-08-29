@@ -170,11 +170,10 @@ body {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  margin: 0 auto;
 }
 
 .video-container iframe {
