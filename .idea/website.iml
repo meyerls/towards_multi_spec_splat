@@ -5,5 +5,6 @@
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="meyerls.github.io" />
+    <orderEntry type="module" module-name="fruit_nerf_pp_website" />
   </component>
 </module>

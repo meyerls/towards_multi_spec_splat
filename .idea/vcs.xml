@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../06_CF-NeRF/fruit_nerf_pp_website" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../../../08_private/Website/meyerls.github.io" vcs="Git" />
   </component>
 </project>
